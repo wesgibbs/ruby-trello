@@ -122,6 +122,13 @@ module Trello
       Client.delete("/cards/#{id}/members/#{member.id}")
     end
 
+    # Move this card to the given list
+    def move_to_list(list)
+      Client.put("/cards/#{id}/idList", {
+        :value => list.id
+      })
+    end
+
     # Retrieve a list of labels
     def labels
       labels = Client.get("/cards/#{id}/labels").json_into(Label)
