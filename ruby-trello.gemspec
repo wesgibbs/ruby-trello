@@ -1,18 +1,18 @@
 Gem::Specification.new do |s|
-  s.name              = %q{ruby-trello}
-  s.version           = "0.4.2"
+  s.name              = %q{ruby-trello-wgibbs}
+  s.version           = "0.4.3"
   s.platform          = Gem::Platform::RUBY
 
-  s.authors           = ["Jeremy Tregunna"]
+  s.authors           = ["Jeremy Tregunna", "Wes Gibbs"]
   s.date              = %q{2012-02-14}
   s.description       = %q{A wrapper around the trello.com API.}
-  s.email             = %q{jeremy@tregunna.ca}
+  s.email             = %q{jeremy@tregunna.ca wesgibbs@gmail.com}
   s.extra_rdoc_files  = ["README.md"]
   s.files             = Dir.glob("lib/**/*") + %w(README.md)
-  s.homepage          = %q{https://github.com/jeremytregunna/ruby-trello}
+  s.homepage          = %q{https://github.com/wgibbs/ruby-trello}
   s.rdoc_options      = ["--charset=UTF-8"]
   s.require_paths     = ["lib"]
-  s.rubyforge_project = %q{ruby-trello}
+  s.rubyforge_project = %q{ruby-trello-wgibbs}
   s.rubygems_version  = %q{1.3.5}
   s.summary           = %q{A wrapper around the trello.com API.}
   s.test_files        = Dir.glob("spec/**/*")
