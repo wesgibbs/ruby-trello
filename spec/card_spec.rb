@@ -155,6 +155,15 @@ module Trello
         Client.should_receive(:delete).with("/cards/abcdef123456789123456789/members/#{existing_member.id}")
         @card.remove_member(existing_member)
       end
+
+      it "allows all members to be removed from a card" do
+        members = [stub(:id => '1'), stub(:id => '2'), stub(:id => '3')]
+        @card.stub(:members => members)
+        Client.should_receive(:delete).with("/cards/abcdef123456789123456789/members/#{members[0].id}")
+        Client.should_receive(:delete).with("/cards/abcdef123456789123456789/members/#{members[1].id}")
+        Client.should_receive(:delete).with("/cards/abcdef123456789123456789/members/#{members[2].id}")
+        @card.remove_all_members
+      end
     end
 
     context "comments" do
