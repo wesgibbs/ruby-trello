@@ -122,6 +122,13 @@ module Trello
       Client.delete("/cards/#{id}/members/#{member.id}")
     end
 
+    # Removes all members from this card
+    def remove_all_members
+      members.each do |member|
+        Client.delete("/cards/#{id}/members/#{member.id}")
+      end
+    end
+
     # Move this card to the given list
     def move_to_list(list)
       Client.put("/cards/#{id}/idList", {
